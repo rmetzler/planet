@@ -1,0 +1,13 @@
+www:
+  build: .
+  ports:
+    - "3000:3000"
+  links:
+    - mongodb
+    - elasticsearch
+
+elasticsearch:
+  image: elasticsearch
+
+mongodb:
+  image: mongo
